@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quiz Web App</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- SIGNUP -->
+  <div id="signupBox">
+    <h2>Signup</h2>
+    <input type="text" id="signupName" placeholder="Full Name">
+    <input type="email" id="signupEmail" placeholder="Email">
+    <input type="password" id="signupPassword" placeholder="Password">
+    <button onclick="signup()">Signup</button>
+  </div>
+
+  <!-- LOGIN -->
+  <div id="loginBox" style="display:none;">
+    <h2>Login</h2>
+    <input type="email" id="loginEmail" placeholder="Email">
+    <input type="password" id="loginPassword" placeholder="Password">
+    <button onclick="login()">Login</button>
+  </div>
+
+  <!-- DASHBOARD -->
+  <div id="dashboard" style="display:none;">
+    <h2 id="welcome"></h2>
+
+    <div class="card" onclick="startQuiz()">
+      <h3>JavaScript Quiz</h3>
+      <p>Test your JS knowledge</p>
+    </div>
+  </div>
+
+  <!-- QUIZ -->
+  <div id="quizBox" style="display:none;">
+    <h3 id="question"></h3>
+    <div id="options"></div>
+    <button onclick="nextQuestion()">Next</button>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
